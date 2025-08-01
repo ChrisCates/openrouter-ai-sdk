@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "composite": false,
+    "types": ["@types/bun"],
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*", "test/**/*", "types/**/*"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test/todo/**/*",
+    "test/utils/bun-chat-model.ts"
+  ]
+}

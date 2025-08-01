@@ -1,0 +1,7 @@
+[install]
+# Configure package manager behavior
+peer = true
+
+[test]
+# Use TypeScript for tests
+preload = ["./packages/v5/test/setup.ts"]

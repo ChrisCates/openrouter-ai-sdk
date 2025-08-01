@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig/base.json",
+  "compilerOptions": {
+    "composite": true
+  },
+  "include": ["test/**/*.ts"],
+  "references": [
+    {
+      "path": "./packages/shared"
+    },
+    {
+      "path": "./packages/v4"
+    },
+    {
+      "path": "./packages/v5"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@openrouter/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --fix",
+    "check-types": "tsc --noEmit",
+    "test": "bun test",
+    "test:coverage": "bun test --coverage"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@openrouter/eslint": "workspace:*",
+    "@types/bun": "latest",
+    "tsup": "^8.3.5",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  }
+}

@@ -1,0 +1,3 @@
+# bunfig.toml
+[test]
+preload = ["./happydom.ts", "./testing-library.ts"]

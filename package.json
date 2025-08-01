@@ -1,0 +1,60 @@
+{
+  "name": "openrouter-ai-sdk",
+  "version": "1.0.2",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./packages/v5/dist/index.d.ts",
+      "import": "./packages/v5/dist/index.js",
+      "require": "./packages/v5/dist/index.cjs"
+    },
+    "./v4": {
+      "types": "./packages/v4/dist/index.d.ts",
+      "import": "./packages/v4/dist/index.js",
+      "require": "./packages/v4/dist/index.cjs"
+    },
+    "./v5": {
+      "types": "./packages/v5/dist/index.d.ts",
+      "import": "./packages/v5/dist/index.js",
+      "require": "./packages/v5/dist/index.cjs"
+    }
+  },
+  "files": [
+    "packages/v4/dist",
+    "packages/v5/dist",
+    "packages/shared/dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "test": "turbo run test",
+    "test:coverage": "turbo run test:coverage",
+    "test:unit": "bun test packages/*/tests/**/*.test.ts",
+    "test:integration": "bun test tests/integration/**/*.test.ts",
+    "test:e2e": "bun test tests/e2e/**/*.test.ts",
+    "clean": "turbo run clean"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "jiti": "^2.4.2",
+    "prettier": "^3.6.2",
+    "tsup": "^8.3.5",
+    "turbo": "^2.5.5",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.2.15",
+  "workspaces": [
+    "packages/*",
+    "tools/*"
+  ]
+}

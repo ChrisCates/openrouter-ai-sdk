@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "composite": false,
+    "types": ["@types/bun"],
+    "moduleResolution": "bundler"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.test.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
